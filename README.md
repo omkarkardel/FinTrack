@@ -1,4 +1,4 @@
-# FinTrack — Finance Dashboard
+# 📈 FinTrack — Finance Dashboard
 
 A modern, responsive **finance dashboard web application** built with **React + Vite** to showcase clean frontend development, polished UI design, and scalable state management.
 
@@ -73,7 +73,7 @@ It was built as a frontend showcase project to demonstrate **UI/UX thinking**, *
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **React 19**
 - **Vite**
@@ -88,7 +88,7 @@ It was built as a frontend showcase project to demonstrate **UI/UX thinking**, *
 
 ---
 
-## Folder Structure
+## 📂 Folder Structure
 
 ```
 src/
@@ -106,7 +106,7 @@ src/
 ```
 ---
 
-### Project Architecture Approach
+## Project Architecture Approach
 
 The application is structured around a dashboard shell layout designed to simulate a real-world fintech product interface.
 
@@ -137,7 +137,7 @@ This makes the codebase easier to maintain, extend, and reuse.
 
 ---
 
-### State Management Approach
+## State Management Approach
 
 Application state is managed centrally using Zustand with persisted state.
 
@@ -155,7 +155,7 @@ This keeps UI logic predictable and avoids excessive prop drilling.
 
 ---
 
-### Data Approach
+## Data Approach
 
 The project uses realistic mock financial data and LocalStorage persistence to simulate a product-like frontend workflow without requiring a backend.
 
@@ -171,14 +171,18 @@ This allows the dashboard to demonstrate:
 
 1. Clone the repository
   git clone https://github.com/omkarkardel/FinTrack.git
-  cd dashboard
 
-3. Install dependencies
+    ```bash
+    cd dashboard
+
+2. Install dependencies
+ 
    ```bash
    npm install
 
 
-5. Start the development server
+3. Start the development server
+   
    ```bash
    npm run dev
 
@@ -188,6 +192,7 @@ The app will run locally at: http://localhost:5173
 Available Scripts
   
 Run development server
+
    ```bash
    npm run dev
    ```
@@ -199,20 +204,22 @@ Build for production
   ```
 
 Preview production build
+
   ```bash
   npm run preview
   ```
 
 Run lint checks
+
   ```bash
   npm run lint
   ```
 
 ---
 
-### Role-Based Access Summary
+## Role-Based Access Summary
 
-Viewer
+- Viewer
 Can access:
 
 - Dashboard
@@ -226,30 +233,51 @@ Cannot:
 - delete transactions
 - access management actions
   
-Admin
+- Admin
 Full dashboard access
 
 - Can perform transaction management actions
 
 - The role behavior is simulated entirely on the frontend using store-level checks and conditional rendering.
 
-### Screenshots
+## 📸 Screenshots   
 
-Dashboard
+### Dashboard
 
-Add screenshot here
-
-Transactions
-
-Add screenshot here
-
-Insights
-
-Add screenshot here
+<img width="1920" height="895" alt="FinTrack - Google Chrome 03-04-2026 08_39_07 PM" src="https://github.com/user-attachments/assets/246096ea-48a5-4e2f-9498-bdf7340c125f" />
+<img width="1920" height="869" alt="File Explorer 03-04-2026 08_44_17 PM" src="https://github.com/user-attachments/assets/9fec8498-028e-4b5e-9098-10fa78673d31" />
+<img width="1920" height="871" alt="FinTrack - Google Chrome 03-04-2026 08_44_28 PM" src="https://github.com/user-attachments/assets/087f7041-81f0-466f-8c64-e47397638cf3" />
+<img width="1920" height="878" alt="FinTrack - Google Chrome 03-04-2026 08_44_48 PM" src="https://github.com/user-attachments/assets/07719d38-dc30-44b5-a33f-7d534ce81fac" />
 
 ---
 
-### Demo Flow
+### Transactions
+
+  <img width="1920" height="871" alt="Captures - File Explorer 03-04-2026 08_53_36 PM" src="https://github.com/user-attachments/assets/1994eb96-f8fb-4234-9263-224f29c1a391" />
+  <img width="1920" height="891" alt="FinTrack - Google Chrome 03-04-2026 08_53_46 PM" src="https://github.com/user-attachments/assets/ff223e42-c488-4239-a187-152be77a6611" />
+
+---
+
+### Insights
+
+  <img width="1920" height="885" alt="FinTrack - Google Chrome 03-04-2026 08_54_04 PM" src="https://github.com/user-attachments/assets/67b576d2-d140-4f8d-a07c-377c8bdda05a" />
+
+---
+
+### Cards
+  
+  <img width="1920" height="887" alt="FinTrack - Google Chrome 03-04-2026 08_54_16 PM" src="https://github.com/user-attachments/assets/1b5f8df4-3ce1-46e0-9267-64f571072a93" />
+
+
+---
+
+### Goals
+
+<img width="1920" height="895" alt="FinTrack - Google Chrome 03-04-2026 08_54_33 PM" src="https://github.com/user-attachments/assets/7ec3fce5-7929-4c77-99a7-45d2382a8dc4" />
+
+---
+
+## Demo Flow
 
 A simple walkthrough to evaluate the project:
 
@@ -257,6 +285,7 @@ Open the dashboard homepage
 Toggle between dark and light mode
 Switch role from Admin to Viewer
 Navigate to the Transactions page
+
 Demonstrate:
 - search
 - filters
@@ -273,7 +302,7 @@ Demonstrate:
 - Insights
 - Show responsive behavior on smaller screen sizes
 
-### Future Improvements
+## Future Improvements
 
 Potential future enhancements include:
 
@@ -285,9 +314,10 @@ Potential future enhancements include:
 - notifications center
 - user profile settings
 
-### Author
+## Author
 
 Omkar Kardel
+
 🔗 GitHub: @omkarkardel
 
 
