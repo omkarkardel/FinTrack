@@ -3,6 +3,7 @@
 A modern, responsive **finance dashboard web application** built with **React + Vite** to showcase clean frontend development, polished UI design, and scalable state management.
 
 🔗 **GitHub Repository:** [FinTrack](https://github.com/omkarkardel/FinTrack)
+
 🌐 **Live Demo:** [View FinTrack](https://fin-track-en431kyre-omkars-projects-446298cd.vercel.app/)
 
 
