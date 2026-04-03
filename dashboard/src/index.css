@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #050b18;
+  --bg-shell: #091428;
+  --panel: rgba(11, 23, 45, 0.86);
+  --panel-muted: rgba(17, 30, 56, 0.78);
+  --surface: rgba(33, 53, 93, 0.45);
+  --border: rgba(148, 163, 184, 0.16);
+  --text: #d6e0fb;
+  --text-strong: #f8fbff;
+  --text-soft: #8ca0ca;
+  --ring: rgba(56, 189, 248, 0.5);
+  --shadow: 0 30px 90px rgba(1, 8, 24, 0.5);
+  --shadow-soft: 0 18px 50px rgba(3, 10, 28, 0.35);
+  --glow-cyan: rgba(34, 211, 238, 0.32);
+  --glow-violet: rgba(139, 92, 246, 0.26);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f7ff;
+  --bg-shell: #e6eefc;
+  --panel: rgba(255, 255, 255, 0.94);
+  --panel-muted: rgba(242, 246, 255, 0.84);
+  --surface: rgba(233, 240, 255, 0.88);
+  --border: rgba(15, 23, 42, 0.08);
+  --text: #53627e;
+  --text-strong: #10203d;
+  --text-soft: #7b8aa8;
+  --ring: rgba(59, 130, 246, 0.2);
+  --shadow: 0 26px 70px rgba(148, 163, 184, 0.24);
+  --shadow-soft: 0 15px 40px rgba(148, 163, 184, 0.18);
+  --glow-cyan: rgba(56, 189, 248, 0.2);
+  --glow-violet: rgba(99, 102, 241, 0.16);
+}
+
+@layer base {
+  * {
+    @apply box-border border-[color:var(--border)];
+  }
+
+  html {
+    @apply h-full antialiased;
+    background:
+      radial-gradient(circle at 12% 4%, rgba(56, 189, 248, 0.2), transparent 26%),
+      radial-gradient(circle at 86% 5%, rgba(167, 139, 250, 0.16), transparent 24%),
+      radial-gradient(circle at 54% 0%, rgba(16, 185, 129, 0.09), transparent 32%),
+      linear-gradient(180deg, var(--bg-shell), var(--bg));
+  }
+
+  body {
+    @apply m-0 h-full min-w-[320px] overflow-hidden font-sans;
+    background: transparent;
+    color: var(--text);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  #root {
+    @apply h-screen overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .bg-app {
+    background:
+      radial-gradient(circle at 12% 18%, rgba(34, 211, 238, 0.14), transparent 26%),
+      radial-gradient(circle at 88% 10%, rgba(236, 72, 153, 0.12), transparent 25%),
+      radial-gradient(circle at 70% 76%, rgba(139, 92, 246, 0.1), transparent 28%),
+      linear-gradient(180deg, var(--bg-shell), var(--bg));
+  }
+
+  .glass-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+    position: relative;
+  }
+
+  .glass-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01) 38%, transparent 64%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 1px;
+  }
+
+  .glass-muted {
+    background: var(--panel-muted);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .premium-card {
+    position: relative;
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  }
+
+  .premium-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 22px 54px rgba(2, 8, 23, 0.38),
+      0 0 0 1px rgba(148, 163, 184, 0.18) inset;
+    border-color: rgba(56, 189, 248, 0.24);
+  }
+
+  .premium-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 0%, var(--glow-cyan), transparent 34%),
+      radial-gradient(circle at 88% 100%, var(--glow-violet), transparent 34%);
+    opacity: 0;
+    transition: opacity 260ms ease;
+  }
+
+  .premium-card:hover::after {
+    opacity: 0.32;
+  }
+
+  .text-strong {
+    color: var(--text-strong);
+  }
+
+  .text-soft {
+    color: var(--text-soft);
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
