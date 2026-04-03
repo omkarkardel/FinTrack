@@ -1,4 +1,4 @@
-# FinTrack — Premium Finance Dashboard
+# FinTrack — Finance Dashboard
 
 A modern, responsive **finance dashboard web application** built with **React + Vite** to showcase clean frontend development, polished UI design, and scalable state management.
 
@@ -90,6 +90,7 @@ It was built as a frontend showcase project to demonstrate **UI/UX thinking**, *
 
 ## Folder Structure
 
+```
 src/
   components/
     dashboard/      # Overview cards and analytics widgets
@@ -102,8 +103,9 @@ src/
   lib/              # Utility helpers
   pages/            # Route-like page views
   store/            # Zustand store + persistence + RBAC guard
-
+```
 ---
+
 ### Project Architecture Approach
 
 The application is structured around a dashboard shell layout designed to simulate a real-world fintech product interface.
@@ -112,26 +114,28 @@ Layout Strategy
 
 The UI follows a clean app shell architecture with:
 
-a fixed left sidebar
-a top navigation/header
-a scrollable right-side content panel
+- a fixed left sidebar
+- a top navigation/header
+- a scrollable right-side content panel
 
 This structure improves:
 
-usability by keeping navigation always accessible
-layout consistency across pages
-scalability for multi-page dashboard expansion
-better UX by allowing only the content area to scroll
-Component Strategy
+- usability by keeping navigation always accessible
+- layout consistency across pages
+- scalability for multi-page dashboard expansion
+- better UX by allowing only the content area to scroll
+- Component Strategy
 
 The project is organized into reusable and domain-specific components such as:
 
-layout components for the app shell
-dashboard widgets for analytics and charts
-transaction components for filters, tables, and forms
-UI primitives for reusable styling patterns
+- layout components for the app shell
+- dashboard widgets for analytics and charts
+- transaction components for filters, tables, and forms
+- UI primitives for reusable styling patterns
 
 This makes the codebase easier to maintain, extend, and reuse.
+
+---
 
 ### State Management Approach
 
@@ -148,6 +152,7 @@ The store handles:
 - dashboard metrics
 
 This keeps UI logic predictable and avoids excessive prop drilling.
+
 ---
 
 ### Data Approach
@@ -156,66 +161,79 @@ The project uses realistic mock financial data and LocalStorage persistence to s
 
 This allows the dashboard to demonstrate:
 
-analytics rendering
-filtering and sorting behavior
-role-based UI changes
-persisted user preferences
-Setup Instructions
+- analytics rendering
+- filtering and sorting behavior
+- role-based UI changes
+- persisted user preferences
+- Setup Instructions
 
-Follow these steps to run the project locally.
+### Follow these steps to run the project locally.
 
 1. Clone the repository
-git clone https://github.com/omkarkardel/FinTrack.git
-cd FinTrack
+  git clone https://github.com/omkarkardel/FinTrack.git
+  cd dashboard
 
 3. Install dependencies
-npm install
+   ```bash
+   npm install
+
 
 5. Start the development server
-npm run dev
+   ```bash
+   npm run dev
 
-The app will run locally at:
+The app will run locally at: http://localhost:5173
 
-http://localhost:5173
 
 Available Scripts
+  
 Run development server
-npm run dev
+   ```bash
+   npm run dev
+   ```
 
 Build for production
-npm run build
+
+  ```bash
+  npm run build
+  ```
 
 Preview production build
-npm run preview
+  ```bash
+  npm run preview
+  ```
 
 Run lint checks
-npm run lint
+  ```bash
+  npm run lint
+  ```
+
 ---
 
 ### Role-Based Access Summary
-Viewer
 
+Viewer
 Can access:
 
-Dashboard
-Transactions
-Insights (if enabled in build)
+- Dashboard
+- Transactions
+- Insights (if enabled in build)
 
 Cannot:
 
-add transactions
-edit transactions
-delete transactions
-access management actions
+- add transactions
+- edit transactions
+- delete transactions
+- access management actions
+  
 Admin
 Full dashboard access
-Can perform transaction management actions
 
-The role behavior is simulated entirely on the frontend using store-level checks and conditional rendering.
+- Can perform transaction management actions
+
+- The role behavior is simulated entirely on the frontend using store-level checks and conditional rendering.
 
 ### Screenshots
-
-You can add screenshots inside a docs/ folder and reference them here.
 
 Dashboard
 
@@ -240,19 +258,20 @@ Toggle between dark and light mode
 Switch role from Admin to Viewer
 Navigate to the Transactions page
 Demonstrate:
-search
-filters
-sorting
-CSV export
-Switch back to Admin
-Add / edit / delete a transaction using the modal form
-Visit:
-Dashboard
-Balance
-Cards
-Goals
-Insights
-Show responsive behavior on smaller screen sizes
+- search
+- filters
+- sorting
+- CSV export
+- Switch back to Admin
+- Add / edit / delete a transaction using the modal form
+  
+- Visit:
+- Dashboard
+- Balance
+- Cards
+- Goals
+- Insights
+- Show responsive behavior on smaller screen sizes
 
 ### Future Improvements
 
