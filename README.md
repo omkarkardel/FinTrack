@@ -4,9 +4,6 @@ A modern, responsive **finance dashboard web application** built with **React + 
 
 🔗 **GitHub Repository:** [FinTrack](https://github.com/omkarkardel/FinTrack)
 
-🌐 **Live Demo:** [View FinTrack](https://fin-track-rouge-chi.vercel.app/)
-
-
 ---
 
 ## Overview
